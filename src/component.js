@@ -410,6 +410,14 @@ var QuillComponent = createClass({
 		this.editor.focus();
 	},
 
+	format: function(name, value) {
+		console.log(1)
+		this.editor.format(name, value);
+	},
+	keybind: function(about, handler) {
+		this.editor.keyboard.addBinding(about, handler);
+	},
+
 	blur: function() {
 		this.setEditorSelection(this.editor, null);
 	}
