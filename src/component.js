@@ -411,11 +411,10 @@ var QuillComponent = createClass({
 	},
 
 	format: function(name, value) {
-		console.log(1)
 		this.editor.format(name, value);
 	},
-	keybind: function(about, handler) {
-		this.editor.keyboard.addBinding(about, handler);
+	keybind: function(about, context, handler) {
+		this.editor.keyboard.addBinding(about, context, handler);
 	},
 
 	blur: function() {
